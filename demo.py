@@ -1,66 +1,118 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torch.utils.data import DataLoader
-from torchvision import datasets, transforms
-import sys
+import torchvision.transforms as transforms
+from torchvision.datasets import FashionMNIST
+from torch.utils.data import DataLoader, random_split
 
-# Check if GPU acceleration is enabled
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print(f"Using device: {device}")
 
-# Load Fashion MNIST dataset
-transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.5,), (0.5,))])
-train_dataset = datasets.FashionMNIST(root="./data", train=True, transform=transform, download=True)
-train_dataloader = DataLoader(train_dataset, batch_size=32, shuffle=True)
+print(device)
 
-# Define a simple DNN model
-class DNN(nn.Module):
+# Data preprocessing
+transform = transforms.Compose([
+    transforms.ToTensor(),
+])
+
+# Load dataset
+dataset = FashionMNIST(root="./data", train=True, download=True, transform=transform)
+test_dataset = FashionMNIST(root="./data", train=False, download=True, transform=transform)
+
+# Split training dataset
+train_size = len(dataset) - 5000
+valid_size = 5000
+train_dataset, valid_dataset = random_split(dataset, [train_size, valid_size])
+
+# Create DataLoaders
+train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)
+valid_loader = DataLoader(valid_dataset, batch_size=8, shuffle=False)
+test_loader = DataLoader(test_dataset, batch_size=8, shuffle=False)
+
+
+# Define model
+class CNN(nn.Module):
     def __init__(self):
-        super(DNN, self).__init__()
-        self.fc1 = nn.Linear(28 * 28, 64)
-        self.fc2 = nn.Linear(64, 32)
-        self.fc3 = nn.Linear(32, 10)
-        self.relu = nn.ReLU()
+        super(CNN, self).__init__()
+        self.conv_layers = nn.Sequential(
+            nn.Conv2d(in_channels=1, out_channels=64, kernel_size=7, padding=3),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2),
+            nn.Conv2d(in_channels=64, out_channels=128, kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.Conv2d(in_channels=128, out_channels=128, kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2),
+            nn.Conv2d(in_channels=128, out_channels=256, kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.Conv2d(in_channels=256, out_channels=256, kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2),
+        )
+        self.fc_layers = nn.Sequential(
+            nn.Flatten(),
+            nn.Linear(256 * 3 * 3, 128),
+            nn.ReLU(),
+            nn.Dropout(0.5),
+            nn.Linear(128, 64),
+            nn.ReLU(),
+            nn.Dropout(0.5),
+            nn.Linear(64, 10),
+        )
 
     def forward(self, x):
-        x = x.view(x.size(0), -1)  # Flatten input
-        x = self.relu(self.fc1(x))
-        x = self.relu(self.fc2(x))
-        x = self.fc3(x)
+        x = self.conv_layers(x)
+        x = self.fc_layers(x)
         return x
 
 
-# Instantiate model, loss, and optimizer
-model = DNN().to(device)
+# Initialize model, loss function, and optimizer
+model = CNN().to(device)
 criterion = nn.CrossEntropyLoss()
-optimizer = optim.Adam(model.parameters(), lr=0.001)
+optimizer = optim.NAdam(model.parameters())
+
 
 # Training loop
-epochs = 10
-for epoch in range(epochs):
-    total_correct = 0
-    total_samples = 0
-    total_batches = len(train_dataloader)
+def train_model(model, train_loader, valid_loader, criterion, optimizer, epochs=5):
+    for epoch in range(epochs):
+        model.train()
+        running_loss = 0.0
+        correct = 0
+        total = 0
+        for images, labels in train_loader:
+            images, labels = images.to(device), labels.to(device)
+            optimizer.zero_grad()
+            outputs = model(images)
+            loss = criterion(outputs, labels)
+            loss.backward()
+            optimizer.step()
+            running_loss += loss.item()
+            _, predicted = outputs.max(1)
+            total += labels.size(0)
+            correct += predicted.eq(labels).sum().item()
 
-    for batch_idx, (X_batch, y_batch) in enumerate(train_dataloader):
-        X_batch, y_batch = X_batch.to(device), y_batch.to(device)
+        train_acc = 100 * correct / total
 
-        optimizer.zero_grad()
-        outputs = model(X_batch)
-        loss = criterion(outputs, y_batch)
-        loss.backward()
-        optimizer.step()
+        # Validation phase
+        model.eval()
+        valid_loss = 0.0
+        correct = 0
+        total = 0
+        with torch.no_grad():
+            for images, labels in valid_loader:
+                images, labels = images.to(device), labels.to(device)
+                outputs = model(images)
+                loss = criterion(outputs, labels)
+                valid_loss += loss.item()
+                _, predicted = outputs.max(1)
+                total += labels.size(0)
+                correct += predicted.eq(labels).sum().item()
 
-        _, predicted = torch.max(outputs, 1)
-        total_correct += (predicted == y_batch).sum().item()
-        total_samples += y_batch.size(0)
-        accuracy = total_correct / total_samples * 100
-        progress = (batch_idx + 1) / total_batches * 100
-        bar = '#' * int(progress // 2) + '-' * (50 - int(progress // 2))
-        print(f"Epoch {epoch + 1}/{epochs} [{bar}] {progress:.1f}% - Acc: {accuracy:.2f}%, Loss: {loss.item():.4f}",
-              end='\r')
+        valid_acc = 100 * correct / total
 
-    print(f"Epoch {epoch + 1}/{epochs} [{bar}] 100.0% - Final Acc: {accuracy:.2f}%, Loss: {loss.item():.4f} ")
+        print(
+            f"Epoch {epoch + 1}/{epochs}, Train Loss: {running_loss / len(train_loader):.4f}, Train Acc: {train_acc:.2f}%, "
+            f"Valid Loss: {valid_loss / len(valid_loader):.4f}, Valid Acc: {valid_acc:.2f}%")
 
-print("Training completed!")
+
+# Train the model
+train_model(model, train_loader, valid_loader, criterion, optimizer)
