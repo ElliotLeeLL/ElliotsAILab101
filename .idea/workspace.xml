@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7b62606-7fb7-47ea-beb2-b56f8b757098" name="Changes" comment="Update CH 14. Deep Computer Vision Using Convolutional Neural Networks">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo.py" afterDir="false" />
-    </list>
+    <list default="true" id="f7b62606-7fb7-47ea-beb2-b56f8b757098" name="Changes" comment="Update CH 14. Deep Computer Vision Using Convolutional Neural Networks" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,6 +72,7 @@
       <workItem from="1742606175935" duration="284000" />
       <workItem from="1742638219503" duration="2123000" />
       <workItem from="1742819843258" duration="1549000" />
+      <workItem from="1742901208250" duration="82000" />
     </task>
     <task id="LOCAL-00001" summary="Update Loading and Preprocessing  Data with TensorFlow.ipynb">
       <option name="closed" value="true" />
@@ -140,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742819943938</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update CH 14. Deep Computer Vision Using Convolutional Neural Networks">
+      <option name="closed" value="true" />
+      <created>1742901218766</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1742901218766</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
