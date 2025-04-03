@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7b62606-7fb7-47ea-beb2-b56f8b757098" name="Changes" comment="Finish CH 14. and add CH 15.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f7b62606-7fb7-47ea-beb2-b56f8b757098" name="Changes" comment="Update CH 15." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,6 +74,7 @@
       <workItem from="1742819843258" duration="1549000" />
       <workItem from="1742901208250" duration="82000" />
       <workItem from="1743165966689" duration="1517000" />
+      <workItem from="1743416528872" duration="650000" />
     </task>
     <task id="LOCAL-00001" summary="Update Loading and Preprocessing  Data with TensorFlow.ipynb">
       <option name="closed" value="true" />
@@ -157,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743166044954</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Update CH 15.">
+      <option name="closed" value="true" />
+      <created>1743416546029</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1743416546029</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +178,8 @@
     <MESSAGE value="Remove data directory" />
     <MESSAGE value="Update CH 14. Deep Computer Vision Using Convolutional Neural Networks" />
     <MESSAGE value="Finish CH 14. and add CH 15." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish CH 14. and add CH 15." />
+    <MESSAGE value="Update CH 15." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update CH 15." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ElliotsAILab101$demo.coverage" NAME="demo Coverage Results" MODIFIED="1742822053721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
