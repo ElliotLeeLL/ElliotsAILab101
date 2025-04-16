@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7b62606-7fb7-47ea-beb2-b56f8b757098" name="Changes" comment="Update CH 17." />
+    <list default="true" id="f7b62606-7fb7-47ea-beb2-b56f8b757098" name="Changes" comment="Update CH 17.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,6 +83,8 @@
       <workItem from="1744299104310" duration="805000" />
       <workItem from="1744332572669" duration="53000" />
       <workItem from="1744642163736" duration="1107000" />
+      <workItem from="1744712663646" duration="272000" />
+      <workItem from="1744724317939" duration="563000" />
     </task>
     <task id="LOCAL-00001" summary="Update Loading and Preprocessing  Data with TensorFlow.ipynb">
       <option name="closed" value="true" />
@@ -210,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744642178212</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Update CH 17.">
+      <option name="closed" value="true" />
+      <created>1744712744903</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1744712744903</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
