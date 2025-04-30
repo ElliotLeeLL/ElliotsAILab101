@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7b62606-7fb7-47ea-beb2-b56f8b757098" name="Changes" comment="Update CH 18." />
+    <list default="true" id="f7b62606-7fb7-47ea-beb2-b56f8b757098" name="Changes" comment="Reconstruct the project">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNN/CH 14. Deep Computer Vision Using Convolutional Neural Networks.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/script.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DNN/CH 11. Training Deep Neural Networks.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/DNN/script.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customization/CH 12. Custom Models and Training with TensorFlow.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/customization/script.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generative/CH 17. Autoencoders, GANs, and Diffusion Models.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/generative/script.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keras/CH 10. Introduction to Artificial Neural Networks with Keras.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/keras/script.ipynb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,9 +49,11 @@
       <recent name="F:\MyCode\ElliotsAILab101\handson-ml3-notes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\MyCode\ElliotsAILab101\handson-ml3-notes" />
-      <recent name="F:\MyCode\ElliotsAILab101\data" />
-      <recent name="F:\MyCode\ElliotsAILab101" />
+      <recent name="F:\MyCode\ElliotsAILab101\reinforcement_learning" />
+      <recent name="F:\MyCode\ElliotsAILab101\generative" />
+      <recent name="F:\MyCode\ElliotsAILab101\transformer" />
+      <recent name="F:\MyCode\ElliotsAILab101\RNN" />
+      <recent name="F:\MyCode\ElliotsAILab101\CNN" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -86,6 +95,7 @@
       <workItem from="1744808067162" duration="633000" />
       <workItem from="1744884445540" duration="36000" />
       <workItem from="1745922097798" duration="172000" />
+      <workItem from="1746010911528" duration="334000" />
     </task>
     <task id="LOCAL-00001" summary="Update Loading and Preprocessing  Data with TensorFlow.ipynb">
       <option name="closed" value="true" />
@@ -247,7 +257,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745922114761</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Reconstruct the project">
+      <option name="closed" value="true" />
+      <created>1746011179163</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1746011179163</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +286,8 @@
     <MESSAGE value="Update CH 17." />
     <MESSAGE value="Add CH 18." />
     <MESSAGE value="Update CH 18." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update CH 18." />
+    <MESSAGE value="Reconstruct the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reconstruct the project" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ElliotsAILab101$demo.coverage" NAME="demo Coverage Results" MODIFIED="1742822053721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
