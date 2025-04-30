@@ -85,6 +85,7 @@
       <workItem from="1744724317939" duration="563000" />
       <workItem from="1744808067162" duration="633000" />
       <workItem from="1744884445540" duration="36000" />
+      <workItem from="1745922097798" duration="172000" />
     </task>
     <task id="LOCAL-00001" summary="Update Loading and Preprocessing  Data with TensorFlow.ipynb">
       <option name="closed" value="true" />
@@ -238,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744884460626</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Update CH 18.">
+      <option name="closed" value="true" />
+      <created>1745922114761</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1745922114761</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
