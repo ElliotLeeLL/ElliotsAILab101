@@ -4,18 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7b62606-7fb7-47ea-beb2-b56f8b757098" name="Changes" comment="Reconstruct the project">
+    <list default="true" id="f7b62606-7fb7-47ea-beb2-b56f8b757098" name="Changes" comment="Update script.ipynb files">
+      <change afterPath="$PROJECT_DIR$/numpy/script.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CNN/CH 14. Deep Computer Vision Using Convolutional Neural Networks.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/CNN/script.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DNN/CH 11. Training Deep Neural Networks.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/DNN/script.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customization/CH 12. Custom Models and Training with TensorFlow.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/customization/script.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generative/CH 17. Autoencoders, GANs, and Diffusion Models.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/generative/script.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keras/CH 10. Introduction to Artificial Neural Networks with Keras.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/keras/script.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,22 +31,23 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.demo.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;F:/MyCode/ElliotsAILab101/handson-ml3-notes&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.demo.executor": "Run",
+    "Python.script.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "F:/MyCode/ElliotsAILab101/handson-ml3-notes",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\MyCode\ElliotsAILab101\handson-ml3-notes" />
@@ -96,6 +100,9 @@
       <workItem from="1744884445540" duration="36000" />
       <workItem from="1745922097798" duration="172000" />
       <workItem from="1746010911528" duration="334000" />
+      <workItem from="1746011317489" duration="214000" />
+      <workItem from="1746011542867" duration="1224000" />
+      <workItem from="1746146547943" duration="7788000" />
     </task>
     <task id="LOCAL-00001" summary="Update Loading and Preprocessing  Data with TensorFlow.ipynb">
       <option name="closed" value="true" />
@@ -265,7 +272,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746011179163</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Update script.ipynb files">
+      <option name="closed" value="true" />
+      <created>1746011407605</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1746011407605</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Update script.ipynb files">
+      <option name="closed" value="true" />
+      <created>1746011414903</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1746011414903</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,9 +310,11 @@
     <MESSAGE value="Add CH 18." />
     <MESSAGE value="Update CH 18." />
     <MESSAGE value="Reconstruct the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reconstruct the project" />
+    <MESSAGE value="Update script.ipynb files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update script.ipynb files" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ElliotsAILab101$demo.coverage" NAME="demo Coverage Results" MODIFIED="1742822053721" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ElliotsAILab101$script.coverage" NAME="script Coverage Results" MODIFIED="1746155143675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/numpy" />
   </component>
 </project>
